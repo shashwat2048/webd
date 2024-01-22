@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <title>Shashwat's Portfolio</title>
+    <style>
+        :root{
+            --dHsidebar:100vh;
+            --dWsidebar:20vw;
+            --dHcontent:180vh;
+            --dWcontent:80vw;
+            --dflexdir:row;
+            --dflexdirside:column;
+            --dPossidebar:sticky;
+            --dAlignmain:start;
+            --dboxwidthmobile:45%;
+            --defdisplay:flex;
+            --defjustify:start;
+            --defavatarwidth:80%;
+            --defavatarheight:45%;
+        }
+        @media only screen and (max-width: 767px){
+            .sidebar{
+            --dHsidebar:35vh;
+            --dWsidebar:80vw; 
+            --dPossidebar:static; 
+            --dflexdirside:row;
+            --defjustify:center;
+            }
+            .content{
+            --dHcontent:80vh;
+            --dWcontent:80vw;               
+            }
+            .main{
+            --dflexdir:column;
+            --dAlignmain:center;
+            }
+            .box{
+                --dboxwidthmobile:80%;
+            }
+            .testibox{
+                --dboxwidthmobile:80%;
+            }
+            .info{
+                --defdisplay:none;
+            }
+            .avatarbg{
+            --defavatarwidth:65%;
+            --defavatarheight:50%;
+            }
+        }
+        *{
+            margin: 0;
+            padding: 0;
+            font-family: "Poppins";
+            color: #F5DD90;
+        }
+        body{
+            background-color: #19535F;
+        }
+        .main{
+            display: flex;
+            flex-direction: var(--dflexdir);
+            border: 0px solid ;
+            border-radius: 1vh;
+            padding: 40px;
+            align-items: var(--dAlignmain);
+            position: static;
+            justify-content: center;
+        }
+        .boxout{
+            border: 0px solid;
+            background-color: #0B7A75;
+            border-radius: 3vh;
+            margin-top: 5vh;
+            margin: 2vh;
+            padding: 1vh;
+        }
+        .sidebar{
+            min-height: var(--dHsidebar);
+            width: var(--dWsidebar);
+            position: var(--dPossidebar);
+            top: 8vh;
+            display: flex;
+            flex-direction: var(--dflexdirside);
+            padding: 1.5%;
+            padding-top: 5%;
+            justify-content: var(--defjustify);
+
+        }
+        .content{
+            min-height: var(--dHcontent);
+            width: var(--dWcontent);
+            padding-left: 4vh;
+        }
+        .line{
+            width: 35px;
+            border: 3px solid #F4743B;
+            border-radius: 3px;
+            margin: 2vh;
+            margin-left: 0;
+        }
+        #intextlink{
+            color: #7EE8FA;
+        }
+        .whatiamdoing{
+            display: flex;
+            flex-direction: var(--dflexdir);
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+            padding: 20px;
+        }
+        .contenthead{
+            color: #7EE8FA;
+        }
+        .box{
+            display: flex;
+            width: var(--dboxwidthmobile);
+            margin: 2vh;
+            padding: 1vh;
+            background-color: #19535F;
+            border: 0px;
+            border-radius: 2vh;
+            justify-content: space-between;
+        }
+        .testimonials{
+            display: flex;
+            flex-direction: var(--dflexdir);
+            flex-wrap: wrap;
+        }
+        .testibox{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            height: 40vh;
+            width: var(--dboxwidthmobile);
+            margin: 2vh;
+            padding: 1vh;
+            padding-left: 0vh;
+            background-color: #19535F;
+            border: 0px;
+            border-radius: 2vh;
+            justify-content: center;
+        }
+        .headtext{
+            margin: 1vh;
+        }
+        .heading{
+            margin: 2vh;
+            margin-top: 4vh;
+            margin-left: 0;
+        }
+        .image{
+            margin: 2vh;
+        }
+        .text{
+            margin: 2vh;
+        }
+        iframe{
+            width: 80%;
+            height: 80%;
+            border-radius: 2vh;
+        }
+        .avatarbg{
+            background-color: #D0E4F6;
+            width: var(--defavatarwidth);
+            height: var(--defavatarheight);
+            border-radius: 20px;
+            padding-top: 20px;
+            margin:auto;
+        }
+        .avatar{
+            width:100% ;
+            height:100%;
+            margin: auto;
+        }
+        .sidename{
+            margin-top: 10%;
+            margin-bottom: 10%;
+            text-align: center;
+        }
+        .year{
+            background-color: #19535F;
+            border-radius: 10px;
+            font-size: small;
+            text-align: center;
+            padding: 5px;
+        }
+        .sidehead{
+            margin-bottom: 15%;
+        }
+        ul{
+            list-style-type: none;
+        }
+        li{
+            margin: 20px;
+        }
+        .sideimg{
+            width: auto;
+        }
+        .imgs{
+            width: 45px;
+        }
+        .listitem{
+            display:flex ;
+            align-items: start;
+        }
+        .sidetext{
+            font-size: small;
+            margin-left: 10px ;
+        }
+        .info{
+            display: var(--defdisplay);
+        }
+        .sidecap{
+            color: #BAD7F2;
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <div class="boxout sidebar">
+            <div class="sidehead">
+                <div class="avatarbg"><img src="C:\Users\Dell\Desktop\webd\ska.png" alt="Shashwat Shinghal" class="avatar"></div>
+                <div class="avatarname">
+                    <h2 class="sidename">Shashwat Shinghal</h2>
+                    <div class="year"><p>Student-2nd year(2022-26)</p></div>
+                </div>
+            </div>
+            <div class="info">
+                <ul>
+                    <li>
+                    <div class="listitem">
+                        <div class="sideimg"> <img src="C:\Users\Dell\Desktop\webd\email.png" alt="Email" class="imgs"> </div>
+                        <div class="sidetext"><p class="sidecap">EMAIL</p><p>abc@gmail.com</p></div>
+                    </div>
+                    </li>
+                    <li>
+                    <div class="listitem">    
+                        <div class="sideimg"> <img src="C:\Users\Dell\Desktop\webd\phone-call.png" alt="Phone" class="imgs"> </div>
+                        <div class="sidetext"><p class="sidecap">PHONE</p><p>+91 0911911911</p></div>
+                    </div>
+                    </li>
+                    <li>
+                        <div class="listitem">
+                        <div class="sideimg"> <img src="C:\Users\Dell\Desktop\webd\calendar.png" alt="Birthday" class="imgs"> </div>
+                        <div class="sidetext"><p class="sidecap">BIRTHDAY</p><p>04.07.2004</p></div>
+                    </div>
+                    </li>
+                    <li>
+                        <div class="listitem">
+                        <div class="sideimg"> <img src="C:\Users\Dell\Desktop\webd\placeholder.png" alt="Location" class="imgs"> </div>
+                        <div class="sidetext"><p class="sidecap">LOCATION</p><p>Moradabad</p></div>
+                    </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="boxout content">
+            <div class="aboutme">
+                <h1 class="heading abtme">About Me</h1>
+                <div class="line"></div>
+                <p class="aboutcontent">I'm Shashwat Shinghal, an ambitious student currently pursuing B.Tech in Computer Science at Moradabad Institute of Technology.
+
+                    🌟 Science has always fascinated me, and I'm endlessly curious about exploring new frontiers and acquiring diverse skills. I thrive on embracing challenges that allow me to grow both personally and professionally.
+                    
+                    🎥 One of the ways I channel my passion for technology is through my electrifying YouTube channel, 'Technophiles.' With my brilliant engineering colleagues, we embark on exhilarating projects and share our B.Tech journey's most exciting creations! I invite you to join the techno-adventure at
+                    <a href="https://youtube.com/@TECHNOPHILES_" target="_blank" id="intextlink">Technophiles</a> .
+                    
+                    📈 Embracing the philosophy of continuous improvement, I strive to push my boundaries, seeking opportunities to acquire knowledge and enhance my skillset. For me, learning is a lifelong journey, and I'm enthusiastic about discovering the latest advancements in the world of technology.
+                    
+                    💡 As a computer science enthusiast, I'm captivated by the ever-evolving tech landscape and its profound impact on society. I am particularly interested in exploring cutting-edge technologies to tackle real-world challenges creatively.</p>
+            </div>
+            <h2 class=" heading doing">What I'm Doing</h2>
+            <div class="whatiamdoing">
+                <div class="box box1">
+                    <div class="image">
+                        <img src="C:\Users\Dell\Desktop\webd\content.png" alt="" style="height: 60px; width: 60px;">
+                    </div>
+                    <div class="text">
+                        <h3 class="contenthead">Content Creation</h3>
+                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aperiam, eos?</p>
+                    </div>
+                </div>
+                <div class="box box2">
+                    <div class="image">
+                        <img src="C:\Users\Dell\Desktop\webd\www.png" alt="" style="height: 60px; width: 60px;">
+                    </div>
+                    <div class="text">
+                        <h3 class="contenthead">Web Development</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur, aliquam.</p>
+                    </div>
+                </div>
+                <div class="box box3">
+                    <div class="image">
+                        <img src="C:\Users\Dell\Desktop\webd\analytics.png" alt="" style="height: 60px; width: 60px;">
+                    </div>
+                    <div class="text">
+                        <h3 class="contenthead">Data Analysis</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea, voluptatibus.</p>
+                    </div>
+                </div>
+                <div class="box box4">
+                    <div class="image">
+                        <img src="C:\Users\Dell\Desktop\webd\teamwork.png" alt="" style="height: 60px; width: 60px;">
+                    </div>
+                    <div class="text">
+                        <h3 class="contenthead">Networking</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste, esse!</p>
+                    </div>
+                </div>
+            </div>
+            <h2 class=" heading">YouTube Channel</h2>
+            <div class="testimonials">
+                <div class="testibox vid1">
+                    <iframe src="https://www.youtube.com/embed/_IjjmlWIiEA" frameborder="0"></iframe>
+                </div>
+                <div class="testibox vid2">
+                    <iframe src="https://www.youtube.com/embed/XoobK7ovYzg" frameborder="0"></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
