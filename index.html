@@ -23,6 +23,7 @@
             --defavatarwidth:80%;
             --defavatarheight:45%;
             --dboxminwidth:none;
+            --defcontentpadding:4vh;
         }
         @media only screen and (max-width: 767px){
             .sidebar{
@@ -34,7 +35,8 @@
             }
             .content{
             --dHcontent:80vh;
-            --dWcontent:80vw;               
+            --dWcontent:80vw;   
+            --defcontentpadding:1vh;            
             }
             .main{
             --dflexdir:column;
@@ -97,7 +99,7 @@
         .content{
             min-height: var(--dHcontent);
             width: var(--dWcontent);
-            padding-left: 4vh;
+            padding-left: var(--defcontentpadding);
         }
         .line{
             width: 35px;
@@ -114,7 +116,7 @@
             flex-direction: var(--dflexdir);
             flex-wrap: wrap;
             justify-content: space-evenly;
-            padding: 20px;
+            padding: 0px;
         }
         .contenthead{
             color: #7EE8FA;
