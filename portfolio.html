@@ -22,6 +22,7 @@
             --defjustify:start;
             --defavatarwidth:80%;
             --defavatarheight:45%;
+            --dboxminwidth:none;
         }
         @media only screen and (max-width: 767px){
             .sidebar{
@@ -40,7 +41,8 @@
             --dAlignmain:center;
             }
             .box{
-                --dboxwidthmobile:80%;
+                --dboxwidthmobile:none;
+                --dboxminwidth:80%;
             }
             .testibox{
                 --dboxwidthmobile:80%;
@@ -120,6 +122,7 @@
         .box{
             display: flex;
             width: var(--dboxwidthmobile);
+            min-width: var(--dboxminwidthmobile);
             margin: 2vh;
             padding: 1vh;
             background-color: #19535F;
